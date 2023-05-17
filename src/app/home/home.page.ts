@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
   imports: [IonicModule, CommonModule, RouterLink],
 })
 export class HomePage implements OnInit{
-
   listaUsuarios: User[] = []
   
   constructor(private userService: UserService, private router: Router) {
@@ -37,5 +36,4 @@ export class HomePage implements OnInit{
 
   excluirUsuario(id: number){
   }
-
 }

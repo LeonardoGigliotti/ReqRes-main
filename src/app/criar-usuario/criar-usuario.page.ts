@@ -14,7 +14,6 @@ import { User } from '../models/user.model';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class CriarUsuarioPage implements OnInit {
-
   first_name = '';
   last_name = '';
   email = '';
@@ -33,7 +32,7 @@ export class CriarUsuarioPage implements OnInit {
         avatar: this.avatar
       }
         this.userService.create(usuario).subscribe(dados => {
-          alert("Usuario inserido com sucesso, id: " + dados.id)
+          alert("Usuario criado com sucesso, id: " + dados.id)
           this.router.navigateByUrl('/home');
         })
     }

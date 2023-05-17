@@ -14,7 +14,6 @@ import { User } from '../models/user.model';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class AlterarUsuarioPage implements OnInit {
-
   id = 0;
   first_name = '';
   last_name = '';
@@ -43,7 +42,7 @@ export class AlterarUsuarioPage implements OnInit {
       avatar: this.avatar
     }
     this.userService.update(usuario).subscribe(dados => {
-      alert("Usuario atualizado com sucesso " + dados.id )
+      alert("Usuario alterado com sucesso " + dados.id )
       this.router.navigateByUrl('/home');
     })
   }
